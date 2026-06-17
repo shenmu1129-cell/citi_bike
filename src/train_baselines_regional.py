@@ -105,7 +105,14 @@ def train_baselines(config: Dict, quick: bool = False) -> pd.DataFrame:
         rows.append({"model": name, **regression_metrics(y_test, pred), "notes": note})
         with (PATHS["models"] / f"regional_baseline_{name.lower().replace(' ', '_')}.pkl").open("wb") as f:
             pickle.dump({"model": model, "features": features}, f)
-    metrics = pd.DataFrame(rows).sort_values("RMSE")
+    metrics = pd.DataFrame(rows)
+    metrics_path = PATHS["tables"] / "regional_model_metrics.csv"
+    if metrics_path.exists():
+        existing = pd.read_csv(metrics_path)
+        keep = existing[~existing["model"].isin(metrics["model"])]
+        if not keep.empty:
+            metrics = pd.concat([metrics, keep], ignore_index=True)
+    metrics = metrics.sort_values("RMSE")
     metrics.to_csv(PATHS["tables"] / "regional_model_metrics.csv", index=False)
     log("saved regional baseline metrics")
     return metrics

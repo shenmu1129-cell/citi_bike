@@ -167,7 +167,7 @@ def _write_report(ablation: pd.DataFrame, importance: pd.DataFrame) -> None:
 
 {ablation.sort_values(["model", "RMSE"]).to_markdown(index=False)}
 
-![空间特征消融 RMSE](figures/spatial_feature_ablation_rmse.png)
+![空间特征消融 RMSE](../figures/spatial_feature_ablation_rmse.png)
 
 ## 特征重要性
 
@@ -178,7 +178,7 @@ def _write_report(ablation: pd.DataFrame, importance: pd.DataFrame) -> None:
 
 {importance.sort_values("importance", ascending=False).head(30).to_markdown(index=False)}
 
-![空间特征重要性](figures/spatial_feature_importance.png)
+![空间特征重要性](../figures/spatial_feature_importance.png)
 
 ## 地铁站特征排名
 
