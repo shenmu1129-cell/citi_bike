@@ -1,0 +1,27 @@
+# Regional STGCN extension config.
+# Leave months empty to use the most recent 12 locally available Citi Bike months.
+months:
+
+citibike_url_template: "https://s3.amazonaws.com/tripdata/{month}-citibike-tripdata.zip"
+grid_size: 0.01
+top_regions: 40
+min_regions: 30
+knn_k: 5
+od_k: 5
+sigma_m: 1500
+distance_graph_weight: 0.75
+od_graph_weight: 0.25
+lookback: 24
+train_ratio: 0.70
+val_ratio: 0.15
+test_ratio: 0.15
+random_state: 42
+quick_months: 2
+quick_chunks_per_csv: 1
+quick_epochs: 25
+epochs: 80
+patience: 8
+batch_size: 32
+learning_rate: 0.001
+hidden_channels: 64
+threshold: auto

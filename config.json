@@ -1,0 +1,14 @@
+{
+  "months": [
+    "202603",
+    "202604",
+    "202605"
+  ],
+  "citibike_url_template": "https://s3.amazonaws.com/tripdata/{month}-citibike-tripdata.zip",
+  "latitude": 40.7128,
+  "longitude": -74.006,
+  "timezone": "America/New_York",
+  "test_size": 0.2,
+  "random_state": 42,
+  "quick": false
+}

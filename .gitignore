@@ -1,0 +1,36 @@
+.DS_Store
+.cache/
+__pycache__/
+*.part
+
+# Python caches
+*.pyc
+*.pyo
+*.pyd
+src/__pycache__/
+
+# Raw and generated data. Server training downloads/rebuilds these.
+data/raw/
+data/interim/
+data/processed/
+
+# Generated outputs and model artifacts
+outputs/models/
+outputs/tables/
+outputs/figures/
+outputs/*.pdf
+outputs/*.bak*
+outputs/report_my.md
+
+# Large/binary source artifacts from earlier report-making work
+projects/
+ppt_master_projects/
+reference/
+
+# Common large artifacts
+*.zip
+*.pkl
+*.pt
+*.csv
+*.parquet
+*.feather
