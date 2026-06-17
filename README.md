@@ -53,7 +53,10 @@ conda run -n wwt310 python run_stgcn_regional.py --quick --skip-download
 ```bash
 conda run -n wwt310 python run_stgcn_regional.py --train-only
 conda run -n wwt310 python run_stgcn_regional.py --report-only
+conda run -n wwt310 python run_spatial_feature_analysis.py
 ```
+
+`run_spatial_feature_analysis.py` 用于检验地图特征是否真的有用，会输出地铁特征消融、特征重要性和图表。当前正式结果显示：当前净流量、历史 lag、小时周期是主导因素；地铁站不是第一驱动，但去掉地铁特征会使最佳 RMSE 变差，因此保留为数据验证后的候选空间特征。
 
 主要新增输出：
 
@@ -68,6 +71,9 @@ conda run -n wwt310 python run_stgcn_regional.py --report-only
 - `outputs/tables/dispatch_risk_top10.csv`
 - `outputs/tables/congestion_risk_top10.csv`
 - `outputs/tables/region_map_features.csv`
+- `outputs/tables/spatial_feature_ablation.csv`
+- `outputs/tables/spatial_feature_importance.csv`
+- `outputs/tables/spatial_feature_analysis.md`
 - `outputs/report_stgcn_regional.md`
 
 ## 输出

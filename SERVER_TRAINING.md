@@ -45,6 +45,13 @@ Regenerate figures and report from existing outputs:
 conda run -n wwt310 python run_stgcn_regional.py --report-only
 ```
 
+Analyze whether subway/map features are actually useful:
+
+```bash
+conda run -n wwt310 python run_spatial_feature_analysis.py
+conda run -n wwt310 python run_stgcn_regional.py --report-only
+```
+
 ## Main Outputs
 
 - `data/processed/regional_hourly_panel.csv`
@@ -54,5 +61,7 @@ conda run -n wwt310 python run_stgcn_regional.py --report-only
 - `outputs/tables/stgcn_predictions.csv`
 - `outputs/tables/dispatch_risk_top10.csv`
 - `outputs/tables/congestion_risk_top10.csv`
+- `outputs/tables/spatial_feature_ablation.csv`
+- `outputs/tables/spatial_feature_importance.csv`
 - `outputs/models/stgcn_best.pt`
 - `outputs/report_stgcn_regional.md`
