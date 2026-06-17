@@ -5,6 +5,7 @@ import argparse
 from pathlib import Path
 
 from src.build_region_graph import build_region_graph
+from src.build_map_features import compute_map_features
 from src.build_regional_panel import build_regional_model_dataset, build_regional_panel, download_months
 from src.dispatch_risk import build_dispatch_risk
 from src.regional_common import ensure_dirs, load_config, local_citibike_months, log, month_range_ending, resolve_months
@@ -29,6 +30,7 @@ def run_data_stage(config, quick: bool, skip_download: bool):
     log(f"regional STGCN months: {months}")
     zip_paths = download_months(months, config, skip_download=skip_download)
     panel = build_regional_panel(zip_paths, config, quick=quick)
+    compute_map_features(config)
     build_regional_model_dataset(panel)
     build_region_graph(config)
 

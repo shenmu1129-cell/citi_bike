@@ -10,6 +10,7 @@ import torch
 from torch import nn
 from torch.utils.data import DataLoader, TensorDataset
 
+from .build_map_features import MAP_FEATURE_COLUMNS
 from .regional_common import PATHS, ensure_dirs, log, regression_metrics
 
 
@@ -40,6 +41,10 @@ NODE_FEATURES = [
     "dropoff_rolling_mean_24",
     "net_flow_rolling_mean_24",
     "net_flow_rolling_std_24",
+    "nearest_subway_distance",
+    "subway_count_500m",
+    "subway_count_1000m",
+    "transit_congestion_index",
 ]
 
 
@@ -131,6 +136,17 @@ def add_stgcn_node_features(panel: pd.DataFrame) -> pd.DataFrame:
     df = panel.copy()
     df["datetime"] = pd.to_datetime(df["datetime"])
     df = df.sort_values(["grid_id", "datetime"]).reset_index(drop=True)
+    map_path = PATHS["tables"] / "region_map_features.csv"
+    if map_path.exists():
+        map_features = pd.read_csv(map_path)
+        keep_cols = ["grid_id"] + [c for c in MAP_FEATURE_COLUMNS if c in map_features.columns]
+        df = df.merge(map_features[keep_cols], on="grid_id", how="left")
+    for col in MAP_FEATURE_COLUMNS:
+        if col not in df.columns:
+            df[col] = 0.0
+    df["nearest_subway_distance"] = df["nearest_subway_distance"].fillna(9999.0)
+    for col in [c for c in MAP_FEATURE_COLUMNS if c != "nearest_subway_distance"]:
+        df[col] = df[col].fillna(0.0)
     df["hour"] = df["datetime"].dt.hour
     df["weekday"] = df["datetime"].dt.weekday
     df["is_weekend"] = (df["weekday"] >= 5).astype(int)

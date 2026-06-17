@@ -8,6 +8,7 @@ import numpy as np
 import pandas as pd
 import requests
 
+from .build_map_features import MAP_FEATURE_COLUMNS
 from .regional_common import PATHS, ensure_dirs, log, zip_paths_for_months
 
 
@@ -256,6 +257,17 @@ def build_regional_model_dataset(panel: pd.DataFrame | None = None) -> pd.DataFr
     panel = panel.copy()
     panel["datetime"] = pd.to_datetime(panel["datetime"])
     df = panel.sort_values(["grid_id", "datetime"]).reset_index(drop=True)
+    map_path = PATHS["tables"] / "region_map_features.csv"
+    if map_path.exists():
+        map_features = pd.read_csv(map_path)
+        keep_cols = ["grid_id"] + [c for c in MAP_FEATURE_COLUMNS if c in map_features.columns]
+        df = df.merge(map_features[keep_cols], on="grid_id", how="left")
+    for col in MAP_FEATURE_COLUMNS:
+        if col not in df.columns:
+            df[col] = 0.0
+    df["nearest_subway_distance"] = df["nearest_subway_distance"].fillna(9999.0)
+    for col in [c for c in MAP_FEATURE_COLUMNS if c != "nearest_subway_distance"]:
+        df[col] = df[col].fillna(0.0)
     df["hour"] = df["datetime"].dt.hour
     df["weekday"] = df["datetime"].dt.weekday
     df["month"] = df["datetime"].dt.month

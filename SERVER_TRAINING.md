@@ -2,6 +2,8 @@
 
 This repository keeps the Citi Bike code and configuration only. Raw Citi Bike zip files, processed CSV files, model weights, and generated figures are intentionally ignored by git.
 
+The current main experiment is regional congestion and dispatch risk analysis. It uses Citi Bike trip coordinates, regional net flow, subway map features, a distance + OD hybrid graph, baselines, and a full STGCN model. The weather feature path from the old city-level experiment is retained for compatibility but is not used by the regional dispatch pipeline.
+
 ## Setup
 
 ```bash
@@ -17,7 +19,7 @@ conda run -n wwt310 python -m pip install -r requirements.txt
 conda run -n wwt310 python run_all.py
 ```
 
-## Run Regional STGCN Pipeline
+## Run Regional Congestion/STGCN Pipeline
 
 Full 12-month run:
 
@@ -47,8 +49,10 @@ conda run -n wwt310 python run_stgcn_regional.py --report-only
 
 - `data/processed/regional_hourly_panel.csv`
 - `data/processed/regional_model_dataset.csv`
+- `outputs/tables/region_map_features.csv`
 - `outputs/tables/regional_model_metrics.csv`
 - `outputs/tables/stgcn_predictions.csv`
 - `outputs/tables/dispatch_risk_top10.csv`
+- `outputs/tables/congestion_risk_top10.csv`
 - `outputs/models/stgcn_best.pt`
 - `outputs/report_stgcn_regional.md`

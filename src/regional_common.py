@@ -44,6 +44,7 @@ DEFAULT_CONFIG: Dict[str, Any] = {
 
 PATHS = {
     "raw_citibike": ROOT / "data" / "raw" / "citibike",
+    "raw_spatial": ROOT / "data" / "raw" / "spatial",
     "processed": ROOT / "data" / "processed",
     "figures": ROOT / "outputs" / "figures",
     "tables": ROOT / "outputs" / "tables",

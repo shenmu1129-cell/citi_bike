@@ -5,6 +5,7 @@ from typing import Dict
 import numpy as np
 import pandas as pd
 
+from .build_map_features import MAP_FEATURE_COLUMNS
 from .regional_common import PATHS, ensure_dirs, log
 
 
@@ -42,7 +43,23 @@ def build_dispatch_risk(config: Dict) -> pd.DataFrame:
     )
     scored = scored.merge(region_info[["grid_id", "grid_center_lat", "grid_center_lng"]], on="grid_id", how="left")
     scored = scored.merge(demand[["grid_id", "historical_avg_demand"]], on="grid_id", how="left")
+    map_path = PATHS["tables"] / "region_map_features.csv"
+    if map_path.exists():
+        map_features = pd.read_csv(map_path)
+        keep_cols = ["grid_id"] + [c for c in MAP_FEATURE_COLUMNS if c in map_features.columns]
+        scored = scored.merge(map_features[keep_cols], on="grid_id", how="left")
+    for col in MAP_FEATURE_COLUMNS:
+        if col not in scored.columns:
+            scored[col] = 0.0
+    scored["nearest_subway_distance"] = scored["nearest_subway_distance"].fillna(9999.0)
+    for col in [c for c in MAP_FEATURE_COLUMNS if c != "nearest_subway_distance"]:
+        scored[col] = scored[col].fillna(0.0)
     scored["dispatch_priority"] = scored["predicted_net_flow"].abs() * scored["historical_avg_demand"].fillna(0)
+    scored["congestion_score"] = (
+        scored["predicted_net_flow"].clip(lower=0)
+        * scored["historical_avg_demand"].fillna(0)
+        * (1.0 + scored["transit_congestion_index"].fillna(0) / 10.0)
+    )
 
     shortage = scored[scored["risk_type"] == "shortage_risk"].sort_values("dispatch_priority", ascending=False).head(10)
     overflow = scored[scored["risk_type"] == "overflow_risk"].sort_values("dispatch_priority", ascending=False).head(10)
@@ -59,7 +76,7 @@ def build_dispatch_risk(config: Dict) -> pd.DataFrame:
     risk["suggested_action"] = risk["risk_type"].map(
         {
             "shortage_risk": "建议提前补车",
-            "overflow_risk": "建议提前移走车辆或预留空桩",
+            "overflow_risk": "建议提前移走车辆或预留空桩，缓解满桩拥堵",
             "balanced": "暂不需要明显调度",
         }
     )
@@ -71,8 +88,21 @@ def build_dispatch_risk(config: Dict) -> pd.DataFrame:
         "predicted_net_flow",
         "risk_type",
         "dispatch_priority",
+        "congestion_score",
+        "nearest_subway_distance",
+        "subway_count_500m",
+        "subway_count_1000m",
         "suggested_action",
     ]
     risk[cols].to_csv(PATHS["tables"] / "dispatch_risk_top10.csv", index=False)
+    congestion = (
+        scored[scored["predicted_net_flow"] > 0]
+        .sort_values(["congestion_score", "predicted_net_flow"], ascending=False)
+        .head(10)
+        .copy()
+    )
+    congestion["risk_type"] = "overflow_congestion_risk"
+    congestion["suggested_action"] = "建议提前移走车辆或预留空桩，优先保障地铁/商业周边区域"
+    congestion[cols].to_csv(PATHS["tables"] / "congestion_risk_top10.csv", index=False)
     log(f"saved dispatch risk top10, threshold={threshold:.3f}, rows={len(risk)}")
     return risk[cols]
