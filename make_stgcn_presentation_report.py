@@ -13,6 +13,7 @@ import matplotlib
 matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -284,8 +285,10 @@ def risk_bars(risk: pd.DataFrame, congestion: pd.DataFrame) -> None:
 
 
 def risk_locations(risk: pd.DataFrame, congestion: pd.DataFrame, region_map: pd.DataFrame) -> None:
-    shortage = risk[risk["risk_type"].eq("shortage_risk")].nlargest(8, "dispatch_priority")
-    overflow = congestion.nlargest(8, "congestion_score")
+    shortage = risk[risk["risk_type"].eq("shortage_risk")].nlargest(1, "dispatch_priority").copy()
+    overflow = congestion.nlargest(1, "congestion_score").copy()
+    shortage["datetime"] = pd.to_datetime(shortage["datetime"])
+    overflow["datetime"] = pd.to_datetime(overflow["datetime"])
     fig, ax = plt.subplots(figsize=(6.4, 5.6))
     ax.scatter(
         region_map["grid_center_lng"],
@@ -296,12 +299,45 @@ def risk_locations(risk: pd.DataFrame, congestion: pd.DataFrame, region_map: pd.
         linewidth=0.6,
         label="Top 40 regions",
     )
-    ax.scatter(shortage["grid_center_lng"], shortage["grid_center_lat"], s=260, marker="v", color=COLORS["blue"], edgecolor=COLORS["ink"], label="Shortage")
-    ax.scatter(overflow["grid_center_lng"], overflow["grid_center_lat"], s=260, marker="^", color=COLORS["orange"], edgecolor=COLORS["ink"], label="Overflow")
-    ax.set_title("Highest risks concentrate around the same central grid")
+    base_lng = float(shortage["grid_center_lng"].iloc[0])
+    base_lat = float(shortage["grid_center_lat"].iloc[0])
+    marker_offset = 0.0015
+    shortage_lng = float(shortage["grid_center_lng"].iloc[0]) - marker_offset
+    overflow_lng = float(overflow["grid_center_lng"].iloc[0]) + marker_offset
+    shortage_lat = float(shortage["grid_center_lat"].iloc[0])
+    overflow_lat = float(overflow["grid_center_lat"].iloc[0])
+    ax.plot([base_lng, shortage_lng], [base_lat, shortage_lat], color=COLORS["blue"], linewidth=1.2, alpha=0.8)
+    ax.plot([base_lng, overflow_lng], [base_lat, overflow_lat], color=COLORS["orange"], linewidth=1.2, alpha=0.8)
+    ax.scatter([base_lng], [base_lat], s=80, marker="o", facecolor="white", edgecolor=COLORS["ink"], linewidth=1.1, zorder=4)
+    ax.scatter([shortage_lng], [shortage_lat], s=260, marker="v", color=COLORS["blue"], edgecolor=COLORS["ink"], linewidth=1.2, label="Shortage", zorder=5)
+    ax.scatter([overflow_lng], [overflow_lat], s=260, marker="^", color=COLORS["orange"], edgecolor=COLORS["ink"], linewidth=1.2, label="Overflow", zorder=5)
+    ax.annotate(
+        shortage["datetime"].dt.strftime("%m-%d %H:%M").iloc[0],
+        (shortage_lng, shortage_lat),
+        xytext=(-38, -26),
+        textcoords="offset points",
+        fontsize=9,
+        color=COLORS["blue"],
+        ha="right",
+    )
+    ax.annotate(
+        overflow["datetime"].dt.strftime("%m-%d %H:%M").iloc[0],
+        (overflow_lng, overflow_lat),
+        xytext=(38, 14),
+        textcoords="offset points",
+        fontsize=9,
+        color=COLORS["orange"],
+        ha="left",
+    )
+    ax.set_title("Highest risks share one central grid at different hours")
+    legend_handles = [
+        Line2D([0], [0], marker="o", color="none", markerfacecolor="#c8d4df", markeredgecolor="white", markersize=8, label="Top 40 regions"),
+        Line2D([0], [0], marker="v", color="none", markerfacecolor=COLORS["blue"], markeredgecolor=COLORS["ink"], markersize=9, label="Shortage"),
+        Line2D([0], [0], marker="^", color="none", markerfacecolor=COLORS["orange"], markeredgecolor=COLORS["ink"], markersize=9, label="Overflow"),
+    ]
     ax.set_xlabel("Longitude")
     ax.set_ylabel("Latitude")
-    ax.legend(frameon=False, loc="lower left")
+    ax.legend(handles=legend_handles, frameon=False, loc="lower left", labelspacing=0.45, handletextpad=0.7)
     save_figure(fig, "ppt_fig_10_risk_locations", (6.4, 5.6))
 
 
