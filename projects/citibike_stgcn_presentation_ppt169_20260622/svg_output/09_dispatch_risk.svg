@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#F8FAFC"/>
+  <rect x="28" y="34" width="56" height="652" rx="18" fill="#CC4C36"/>
+  <text x="56" y="86" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">08</text>
+  <text x="56" y="174" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">风</text>
+  <text x="56" y="206" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">险</text>
+  <text x="56" y="238" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">排</text>
+  <text x="56" y="270" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">序</text>
+  <rect x="108" y="46" width="536" height="392" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <image href="../images/ppt_fig_08_shortage_risk.png" x="124" y="66" width="504" height="352" preserveAspectRatio="xMidYMid meet"/>
+  <rect x="672" y="46" width="536" height="392" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <image href="../images/ppt_fig_09_overflow_risk.png" x="688" y="66" width="504" height="352" preserveAspectRatio="xMidYMid meet"/>
+  <rect x="108" y="480" width="334" height="138" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="108" y="480" width="334" height="14" fill="#0C6DB8"/>
+  <text x="138" y="536" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#0C6DB8">缺车风险</text>
+  <text x="138" y="578" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433">17:00 附近预测净流量显著为负，建议提前补车。</text>
+  <rect x="470" y="480" width="334" height="138" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="470" y="480" width="334" height="14" fill="#E06A36"/>
+  <text x="500" y="536" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#E06A36">满桩风险</text>
+  <text x="500" y="578" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433">08:00 附近预测净流量为正，建议移走车辆或预留空桩。</text>
+  <rect x="832" y="480" width="334" height="138" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="832" y="480" width="334" height="14" fill="#CC4C36"/>
+  <text x="862" y="536" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#CC4C36">为什么分开讲</text>
+  <text x="862" y="578" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433">两类风险方向相反，对应完全不同的运营动作。</text>
+  <text x="1190" y="670" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070" text-anchor="end">09</text>
+</svg>

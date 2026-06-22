@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#F8FAFC"/>
+  <rect x="34" y="32" width="1212" height="656" rx="18" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="34" y="32" width="1212" height="84" rx="18" fill="#28C0CD"/>
+  <rect x="34" y="92" width="1212" height="24" fill="#28C0CD"/>
+  <text x="82" y="82" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">CITI BIKE · REGIONAL STGCN</text>
+  <text x="92" y="230" font-family="Microsoft YaHei, Arial, sans-serif" font-size="46" font-weight="700" fill="#1D2433">区域净流量预测与调度风险识别</text>
+  <text x="96" y="282" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" fill="#586070">距离 + OD 混合图 · Top 40 区域 · 下一小时净流量</text>
+  <g id="palette">
+    <rect x="110" y="352" width="138" height="150" rx="16" fill="#948080"/>
+    <rect x="278" y="352" width="138" height="150" rx="16" fill="#E99E80"/>
+    <rect x="446" y="352" width="138" height="150" rx="16" fill="#0C6DB8"/>
+    <rect x="614" y="352" width="138" height="150" rx="16" fill="#28C0CD"/>
+    <rect x="782" y="352" width="138" height="150" rx="16" fill="#E06A36"/>
+    <text x="179" y="433" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">区域面板</text>
+    <text x="347" y="433" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">空间特征</text>
+    <text x="515" y="433" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">STGCN</text>
+    <text x="683" y="433" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">风险地图</text>
+    <text x="851" y="433" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">调度动作</text>
+  </g>
+  <g id="metrics">
+    <rect x="98" y="574" width="210" height="78" rx="12" fill="#FFFFFF" stroke="#D8DEE5"/>
+    <rect x="98" y="574" width="12" height="78" fill="#0C6DB8"/>
+    <text x="126" y="604" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070">Best RMSE</text>
+    <text x="126" y="637" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="700" fill="#0C6DB8">15.85</text>
+    <rect x="342" y="574" width="210" height="78" rx="12" fill="#FFFFFF" stroke="#D8DEE5"/>
+    <rect x="342" y="574" width="12" height="78" fill="#28C0CD"/>
+    <text x="370" y="604" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070">Explained variance</text>
+    <text x="370" y="637" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="700" fill="#28C0CD">0.872</text>
+    <rect x="586" y="574" width="210" height="78" rx="12" fill="#FFFFFF" stroke="#D8DEE5"/>
+    <rect x="586" y="574" width="12" height="78" fill="#E06A36"/>
+    <text x="614" y="604" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070">Regional nodes</text>
+    <text x="614" y="637" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="700" fill="#E06A36">40</text>
+  </g>
+  <rect x="1018" y="574" width="158" height="48" rx="24" fill="#1D2433"/>
+  <text x="1097" y="606" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">汇报版</text>
+</svg>

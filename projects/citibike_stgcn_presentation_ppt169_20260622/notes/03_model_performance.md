@@ -1,0 +1,1 @@
+这一页展示模型对比。STGCN 的 RMSE 最低，R2 最高，说明它在区域净流量预测上优于 MLP、Random Forest、HistGradientBoosting 和 Ridge。

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#F8FAFC"/>
+  <rect x="28" y="34" width="56" height="652" rx="18" fill="#557F7C"/>
+  <text x="56" y="86" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">04</text>
+  <text x="56" y="174" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">关</text>
+  <text x="56" y="206" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">键</text>
+  <text x="56" y="238" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">变</text>
+  <text x="56" y="270" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">量</text>
+  <rect x="110" y="46" width="710" height="548" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <image href="../images/ppt_fig_04_feature_importance.png" x="126" y="68" width="678" height="504" preserveAspectRatio="xMidYMid meet"/>
+  <rect x="852" y="68" width="350" height="470" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="852" y="68" width="350" height="14" fill="#557F7C"/>
+  <text x="884" y="128" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#557F7C">解释重点</text>
+  <text x="884" y="178" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433">
+    <tspan x="884" dy="0">• net_flow 排名第一，说明当前</tspan>
+    <tspan x="884" dy="32">  区域供需状态最重要。</tspan>
+    <tspan x="884" dy="42">• hour_sin / hour 进入前列，</tspan>
+    <tspan x="884" dy="32">  说明通勤周期非常明显。</tspan>
+    <tspan x="884" dy="42">• subway_count_1000m 进入</tspan>
+    <tspan x="884" dy="32">  Top 10，提供区域差异修正。</tspan>
+  </text>
+  <rect x="884" y="456" width="92" height="36" rx="18" fill="#0C6DB8"/>
+  <text x="930" y="480" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">state</text>
+  <rect x="994" y="456" width="92" height="36" rx="18" fill="#28C0CD"/>
+  <text x="1040" y="480" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">time</text>
+  <rect x="1104" y="456" width="92" height="36" rx="18" fill="#E06A36"/>
+  <text x="1150" y="480" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">subway</text>
+  <rect x="110" y="620" width="1092" height="42" rx="12" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <text x="144" y="647" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#1D2433">这一页回答“模型到底靠什么预测”：当前供需状态和时间周期是主因，地铁特征提供局部空间修正。</text>
+  <text x="1190" y="676" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070" text-anchor="end">05</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#F8FAFC"/>
+  <rect x="28" y="34" width="56" height="652" rx="18" fill="#0C6DB8"/>
+  <text x="56" y="86" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">02</text>
+  <text x="56" y="174" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">模</text>
+  <text x="56" y="206" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">型</text>
+  <text x="56" y="238" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">效</text>
+  <text x="56" y="270" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">果</text>
+  <rect x="110" y="48" width="544" height="350" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <image href="../images/ppt_fig_01_model_rmse.png" x="125" y="66" width="514" height="314" preserveAspectRatio="xMidYMid meet"/>
+  <rect x="686" y="48" width="544" height="350" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <image href="../images/ppt_fig_02_model_r2.png" x="701" y="66" width="514" height="314" preserveAspectRatio="xMidYMid meet"/>
+  <rect x="110" y="430" width="344" height="170" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="110" y="430" width="344" height="14" fill="#0C6DB8"/>
+  <text x="140" y="488" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#0C6DB8">RMSE 更低</text>
+  <text x="140" y="528" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433">
+    <tspan x="140" dy="0">STGCN 的 RMSE 为 15.85，</tspan>
+    <tspan x="140" dy="30">是本轮最低。</tspan>
+  </text>
+  <rect x="474" y="430" width="344" height="170" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="474" y="430" width="344" height="14" fill="#28C0CD"/>
+  <text x="504" y="488" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#28C0CD">R² 更高</text>
+  <text x="504" y="528" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433">
+    <tspan x="504" dy="0">R² 达到 0.872，说明模型能</tspan>
+    <tspan x="504" dy="30">解释更多区域净流量波动。</tspan>
+  </text>
+  <rect x="838" y="430" width="344" height="170" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="838" y="430" width="344" height="14" fill="#E06A36"/>
+  <text x="868" y="488" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#E06A36">为什么有效</text>
+  <text x="868" y="528" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433">
+    <tspan x="868" dy="0">STGCN 把区域之间的空间影响</tspan>
+    <tspan x="868" dy="30">纳入模型，而不是只看单区特征。</tspan>
+  </text>
+  <text x="1190" y="670" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070" text-anchor="end">03</text>
+</svg>

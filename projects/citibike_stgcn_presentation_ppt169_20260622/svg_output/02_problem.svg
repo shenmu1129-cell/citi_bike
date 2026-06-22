@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#F8FAFC"/>
+  <rect x="28" y="34" width="56" height="652" rx="18" fill="#28C0CD"/>
+  <text x="56" y="86" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">01</text>
+  <text x="56" y="178" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">任</text>
+  <text x="56" y="210" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">务</text>
+  <text x="56" y="242" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">升</text>
+  <text x="56" y="274" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">级</text>
+  <g id="top-blocks">
+    <rect x="120" y="62" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+    <text x="150" y="112" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#0C6DB8">不是预测全市订单</text>
+    <text x="150" y="158" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433">
+      <tspan x="150" dy="0">城市级需求预测只能回答</tspan>
+      <tspan x="150" dy="30">“下一小时全市有多少订单”，</tspan>
+      <tspan x="150" dy="30">无法指导去哪补车或腾桩。</tspan>
+    </text>
+    <rect x="500" y="62" width="300" height="190" rx="16" fill="#28C0CD"/>
+    <text x="650" y="118" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">改成区域净流量</text>
+    <text x="650" y="176" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">dropoff - pickup</text>
+    <rect x="830" y="62" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+    <text x="860" y="112" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#E06A36">直接转成调度动作</text>
+    <text x="860" y="158" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433">
+      <tspan x="860" dy="0">负值表示缺车风险，</tspan>
+      <tspan x="860" dy="30">正值表示满桩或拥堵风险，</tspan>
+      <tspan x="860" dy="30">输出就是再平衡优先级。</tspan>
+    </text>
+  </g>
+  <rect x="120" y="292" width="508" height="326" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="120" y="292" width="508" height="14" fill="#0C6DB8"/>
+  <text x="154" y="350" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#0C6DB8">这一页要说清楚</text>
+  <text x="154" y="398" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433">
+    <tspan x="154" dy="0">这次实验的重点不是单纯提高全市订单量预测，</tspan>
+    <tspan x="154" dy="32">而是把预测目标换成更贴近运营决策的</tspan>
+    <tspan x="154" dy="32">“区域车辆失衡”。所以后面所有模型指标、</tspan>
+    <tspan x="154" dy="32">空间特征和风险排序，都围绕净流量展开。</tspan>
+  </text>
+  <rect x="668" y="292" width="512" height="326" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="668" y="292" width="512" height="14" fill="#E06A36"/>
+  <text x="704" y="350" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#E06A36">实验对象</text>
+  <text x="704" y="402" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433">
+    <tspan x="704" dy="0">• Top 40 区域网格作为图节点</tspan>
+    <tspan x="704" dy="34">• 24 小时历史窗口预测下一小时</tspan>
+    <tspan x="704" dy="34">• 距离 kNN + 历史 OD 流量构造混合图</tspan>
+    <tspan x="704" dy="34">• 测试集覆盖 2026-04-07 至 2026-05-31</tspan>
+  </text>
+  <text x="1190" y="670" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070" text-anchor="end">02</text>
+</svg>

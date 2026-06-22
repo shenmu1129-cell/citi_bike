@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#F8FAFC" />
+  <path fill="#FFFFFF" stroke="#D8DEE5" d="M52,32 H1228 A18,18 0 0 1 1246,50 V670 A18,18 0 0 1 1228,688 H52 A18,18 0 0 1 34,670 V50 A18,18 0 0 1 52,32 Z" />
+  <path fill="#28C0CD" d="M52,32 H1228 A18,18 0 0 1 1246,50 V98 A18,18 0 0 1 1228,116 H52 A18,18 0 0 1 34,98 V50 A18,18 0 0 1 52,32 Z" />
+  <rect x="34" y="92" width="1212" height="24" fill="#28C0CD" />
+  <text x="82" y="82" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">CITI BIKE · REGIONAL STGCN</text>
+  <text x="92" y="230" font-family="Microsoft YaHei, Arial, sans-serif" font-size="46" font-weight="700" fill="#1D2433">区域净流量预测与调度风险识别</text>
+  <text x="96" y="282" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" fill="#586070">距离 + OD 混合图 · Top 40 区域 · 下一小时净流量</text>
+  <g id="palette">
+    <path fill="#948080" d="M126,352 H232 A16,16 0 0 1 248,368 V486 A16,16 0 0 1 232,502 H126 A16,16 0 0 1 110,486 V368 A16,16 0 0 1 126,352 Z" />
+    <path fill="#E99E80" d="M294,352 H400 A16,16 0 0 1 416,368 V486 A16,16 0 0 1 400,502 H294 A16,16 0 0 1 278,486 V368 A16,16 0 0 1 294,352 Z" />
+    <path fill="#0C6DB8" d="M462,352 H568 A16,16 0 0 1 584,368 V486 A16,16 0 0 1 568,502 H462 A16,16 0 0 1 446,486 V368 A16,16 0 0 1 462,352 Z" />
+    <path fill="#28C0CD" d="M630,352 H736 A16,16 0 0 1 752,368 V486 A16,16 0 0 1 736,502 H630 A16,16 0 0 1 614,486 V368 A16,16 0 0 1 630,352 Z" />
+    <path fill="#E06A36" d="M798,352 H904 A16,16 0 0 1 920,368 V486 A16,16 0 0 1 904,502 H798 A16,16 0 0 1 782,486 V368 A16,16 0 0 1 798,352 Z" />
+    <text x="179" y="433" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">区域面板</text>
+    <text x="347" y="433" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">空间特征</text>
+    <text x="515" y="433" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">STGCN</text>
+    <text x="683" y="433" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">风险地图</text>
+    <text x="851" y="433" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">调度动作</text>
+  </g>
+  <g id="metrics">
+    <path fill="#FFFFFF" stroke="#D8DEE5" d="M110,574 H296 A12,12 0 0 1 308,586 V640 A12,12 0 0 1 296,652 H110 A12,12 0 0 1 98,640 V586 A12,12 0 0 1 110,574 Z" />
+    <rect x="98" y="574" width="12" height="78" fill="#0C6DB8" />
+    <text x="126" y="604" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070">Best RMSE</text>
+    <text x="126" y="637" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="700" fill="#0C6DB8">15.85</text>
+    <path fill="#FFFFFF" stroke="#D8DEE5" d="M354,574 H540 A12,12 0 0 1 552,586 V640 A12,12 0 0 1 540,652 H354 A12,12 0 0 1 342,640 V586 A12,12 0 0 1 354,574 Z" />
+    <rect x="342" y="574" width="12" height="78" fill="#28C0CD" />
+    <text x="370" y="604" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070">Explained variance</text>
+    <text x="370" y="637" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="700" fill="#28C0CD">0.872</text>
+    <path fill="#FFFFFF" stroke="#D8DEE5" d="M598,574 H784 A12,12 0 0 1 796,586 V640 A12,12 0 0 1 784,652 H598 A12,12 0 0 1 586,640 V586 A12,12 0 0 1 598,574 Z" />
+    <rect x="586" y="574" width="12" height="78" fill="#E06A36" />
+    <text x="614" y="604" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070">Regional nodes</text>
+    <text x="614" y="637" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="700" fill="#E06A36">40</text>
+  </g>
+  <path fill="#1D2433" d="M1042,574 H1152 A24,24 0 0 1 1176,598 V598 A24,24 0 0 1 1152,622 H1042 A24,24 0 0 1 1018,598 V598 A24,24 0 0 1 1042,574 Z" />
+  <text x="1097" y="606" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">汇报版</text>
+</svg>

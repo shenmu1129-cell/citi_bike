@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#F8FAFC"/>
+  <rect x="28" y="34" width="56" height="652" rx="18" fill="#E06A36"/>
+  <text x="56" y="86" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">03</text>
+  <text x="56" y="174" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">空</text>
+  <text x="56" y="206" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">间</text>
+  <text x="56" y="238" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">特</text>
+  <text x="56" y="270" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">征</text>
+  <rect x="108" y="42" width="770" height="520" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <image href="../images/ppt_fig_03_feature_ablation.png" x="124" y="62" width="738" height="478" preserveAspectRatio="xMidYMid meet"/>
+  <rect x="910" y="58" width="292" height="178" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="910" y="58" width="292" height="14" fill="#E06A36"/>
+  <text x="938" y="114" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#E06A36">要说清楚</text>
+  <text x="938" y="156" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433">
+    <tspan x="938" dy="0">地图/地铁特征不是第一驱动，</tspan>
+    <tspan x="938" dy="30">但它们稳定改善了模型表现。</tspan>
+  </text>
+  <rect x="910" y="262" width="292" height="108" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="910" y="262" width="12" height="108" fill="#0C6DB8"/>
+  <text x="944" y="300" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070">Full best RMSE</text>
+  <text x="944" y="342" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="700" fill="#0C6DB8">17.33</text>
+  <rect x="910" y="392" width="292" height="108" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="910" y="392" width="12" height="108" fill="#E06A36"/>
+  <text x="944" y="430" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070">No subway delta</text>
+  <text x="944" y="472" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="700" fill="#E06A36">+0.94</text>
+  <rect x="108" y="590" width="1094" height="66" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <text x="142" y="631" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#1D2433">汇报口径：空间特征“保留但不夸大”。真正决定下一小时净流量的，仍然是当前供需状态、历史 lag 和小时周期。</text>
+  <text x="1190" y="670" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070" text-anchor="end">04</text>
+</svg>

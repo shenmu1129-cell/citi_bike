@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#F8FAFC"/>
+  <rect x="28" y="34" width="56" height="652" rx="18" fill="#0C6DB8"/>
+  <text x="56" y="86" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">05</text>
+  <text x="56" y="174" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">训</text>
+  <text x="56" y="206" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">练</text>
+  <text x="56" y="238" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">诊</text>
+  <text x="56" y="270" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">断</text>
+  <rect x="108" y="54" width="760" height="430" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <image href="../images/ppt_fig_05_training_loss.png" x="126" y="74" width="724" height="390" preserveAspectRatio="xMidYMid meet"/>
+  <rect x="900" y="76" width="300" height="184" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="900" y="76" width="300" height="14" fill="#0C6DB8"/>
+  <text x="930" y="132" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#0C6DB8">训练是否稳定？</text>
+  <text x="930" y="178" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433">
+    <tspan x="930" dy="0">训练集和验证集 loss 都快速</tspan>
+    <tspan x="930" dy="30">下降并进入平台期，没有发散。</tspan>
+  </text>
+  <rect x="900" y="292" width="300" height="184" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="900" y="292" width="300" height="14" fill="#28C0CD"/>
+  <text x="930" y="348" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#28C0CD">怎么讲？</text>
+  <text x="930" y="394" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433">
+    <tspan x="930" dy="0">先证明训练过程可靠，</tspan>
+    <tspan x="930" dy="30">再进入预测贴合和风险排序。</tspan>
+  </text>
+  <rect x="108" y="532" width="1092" height="72" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <text x="142" y="576" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#1D2433">这页的作用是建立可信度：模型不是只在训练集上硬拟合，验证集误差也稳定下降。</text>
+  <text x="1190" y="670" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070" text-anchor="end">06</text>
+</svg>

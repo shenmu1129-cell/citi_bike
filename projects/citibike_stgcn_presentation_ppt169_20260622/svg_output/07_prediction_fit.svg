@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#F8FAFC"/>
+  <rect x="28" y="34" width="56" height="652" rx="18" fill="#28C0CD"/>
+  <text x="56" y="86" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">06</text>
+  <text x="56" y="174" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">预</text>
+  <text x="56" y="206" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">测</text>
+  <text x="56" y="238" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">贴</text>
+  <text x="56" y="270" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">合</text>
+  <rect x="116" y="34" width="560" height="618" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <image href="../images/ppt_fig_06_observed_predicted.png" x="136" y="54" width="520" height="578" preserveAspectRatio="xMidYMid meet"/>
+  <rect x="716" y="68" width="470" height="470" rx="16" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="716" y="68" width="470" height="14" fill="#28C0CD"/>
+  <text x="752" y="128" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#28C0CD">这张图怎么讲</text>
+  <text x="752" y="184" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433">
+    <tspan x="752" dy="0">• 点云沿对角线分布，说明预测值和真实值</tspan>
+    <tspan x="752" dy="32">  整体方向一致。</tspan>
+    <tspan x="752" dy="42">• 中心区域样本密度最高，表示大部分区域</tspan>
+    <tspan x="752" dy="32">  小时净流量处于中低波动范围。</tspan>
+    <tspan x="752" dy="42">• 极端正负净流量偏离更大，是高峰调度</tspan>
+    <tspan x="752" dy="32">  风险识别的难点。</tspan>
+  </text>
+  <rect x="752" y="448" width="176" height="72" rx="12" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="752" y="448" width="12" height="72" fill="#0C6DB8"/>
+  <text x="780" y="476" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070">Test rows</text>
+  <text x="780" y="506" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#0C6DB8">52,560</text>
+  <rect x="960" y="448" width="176" height="72" rx="12" fill="#FFFFFF" stroke="#D8DEE5"/>
+  <rect x="960" y="448" width="12" height="72" fill="#E06A36"/>
+  <text x="988" y="476" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070">Target</text>
+  <text x="988" y="506" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#E06A36">net flow</text>
+  <text x="1190" y="670" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070" text-anchor="end">07</text>
+</svg>
