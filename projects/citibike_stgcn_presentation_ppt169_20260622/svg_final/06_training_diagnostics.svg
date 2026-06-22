@@ -11,10 +11,10 @@
   <path fill="#FFFFFF" stroke="#D8DEE5" d="M916,76 H1184 A16,16 0 0 1 1200,92 V244 A16,16 0 0 1 1184,260 H916 A16,16 0 0 1 900,244 V92 A16,16 0 0 1 916,76 Z" />
   <rect x="900" y="76" width="300" height="14" fill="#0C6DB8" />
   <text x="930" y="132" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#0C6DB8">训练是否稳定？</text>
-  <text font-size="18" font-family="Microsoft YaHei, Arial, sans-serif" fill="#1D2433" x="930" y="178">训练集和验证集 loss 都快速</text><text font-size="18" font-family="Microsoft YaHei, Arial, sans-serif" fill="#1D2433" x="930" y="208">下降并进入平台期，没有发散。</text><path fill="#FFFFFF" stroke="#D8DEE5" d="M916,292 H1184 A16,16 0 0 1 1200,308 V460 A16,16 0 0 1 1184,476 H916 A16,16 0 0 1 900,460 V308 A16,16 0 0 1 916,292 Z" />
+  <text font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433" x="930" y="178">训练集和验证集 loss 都快速</text><text font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433" x="930" y="208">下降并进入平台期，没有发散。</text><path fill="#FFFFFF" stroke="#D8DEE5" d="M916,292 H1184 A16,16 0 0 1 1200,308 V460 A16,16 0 0 1 1184,476 H916 A16,16 0 0 1 900,460 V308 A16,16 0 0 1 916,292 Z" />
   <rect x="900" y="292" width="300" height="14" fill="#28C0CD" />
   <text x="930" y="348" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#28C0CD">怎么讲？</text>
-  <text font-size="18" font-family="Microsoft YaHei, Arial, sans-serif" fill="#1D2433" x="930" y="394">先证明训练过程可靠，</text><text font-size="18" font-family="Microsoft YaHei, Arial, sans-serif" fill="#1D2433" x="930" y="424">再进入预测贴合和风险排序。</text><path fill="#FFFFFF" stroke="#D8DEE5" d="M124,532 H1184 A16,16 0 0 1 1200,548 V588 A16,16 0 0 1 1184,604 H124 A16,16 0 0 1 108,588 V548 A16,16 0 0 1 124,532 Z" />
+  <text font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433" x="930" y="394">先证明训练过程可靠，</text><text font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433" x="930" y="424">再进入预测贴合和风险排序。</text><path fill="#FFFFFF" stroke="#D8DEE5" d="M124,532 H1184 A16,16 0 0 1 1200,548 V588 A16,16 0 0 1 1184,604 H124 A16,16 0 0 1 108,588 V548 A16,16 0 0 1 124,532 Z" />
   <text x="142" y="576" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#1D2433">这页的作用是建立可信度：模型不是只在训练集上硬拟合，验证集误差也稳定下降。</text>
   <text x="1190" y="670" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070" text-anchor="end">06</text>
 </svg>

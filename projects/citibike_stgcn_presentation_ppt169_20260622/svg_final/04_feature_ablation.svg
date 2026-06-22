@@ -11,7 +11,7 @@
   <path fill="#FFFFFF" stroke="#D8DEE5" d="M926,58 H1186 A16,16 0 0 1 1202,74 V220 A16,16 0 0 1 1186,236 H926 A16,16 0 0 1 910,220 V74 A16,16 0 0 1 926,58 Z" />
   <rect x="910" y="58" width="292" height="14" fill="#E06A36" />
   <text x="938" y="114" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="700" fill="#E06A36">要说清楚</text>
-  <text font-size="18" font-family="Microsoft YaHei, Arial, sans-serif" fill="#1D2433" x="938" y="156">地图/地铁特征不是第一驱动，</text><text font-size="18" font-family="Microsoft YaHei, Arial, sans-serif" fill="#1D2433" x="938" y="186">但它们稳定改善了模型表现。</text><path fill="#FFFFFF" stroke="#D8DEE5" d="M926,262 H1186 A16,16 0 0 1 1202,278 V354 A16,16 0 0 1 1186,370 H926 A16,16 0 0 1 910,354 V278 A16,16 0 0 1 926,262 Z" />
+  <text font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433" x="938" y="156">地图/地铁特征不是第一驱动，</text><text font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#1D2433" x="938" y="186">但它们稳定改善了模型表现。</text><path fill="#FFFFFF" stroke="#D8DEE5" d="M926,262 H1186 A16,16 0 0 1 1202,278 V354 A16,16 0 0 1 1186,370 H926 A16,16 0 0 1 910,354 V278 A16,16 0 0 1 926,262 Z" />
   <rect x="910" y="262" width="12" height="108" fill="#0C6DB8" />
   <text x="944" y="300" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#586070">Full best RMSE</text>
   <text x="944" y="342" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="700" fill="#0C6DB8">17.33</text>
